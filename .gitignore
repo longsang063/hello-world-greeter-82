@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
+=======
+# Logs
+logs
+*.log
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
 
 # Backup files
 backups/
@@ -240,3 +247,22 @@ update_milestone_triggers_*.sql
 enable_http_extension.sql
 create_test_user.sh
 test_milestone_http.sh
+=======
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8

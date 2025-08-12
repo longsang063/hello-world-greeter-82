@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +22,7 @@ export default {
 			}
 		},
 		extend: {
+<<<<<<< HEAD
 			screens: {
 				'mobile': { 'max': '767px' },
 				'tablet': { 'min': '768px', 'max': '1023px' },
@@ -36,6 +40,8 @@ export default {
 				'roboto': ['Roboto', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
+=======
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -44,8 +50,12 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+<<<<<<< HEAD
 					foreground: 'hsl(var(--primary-foreground))',
 					glow: 'hsl(var(--primary-glow))'
+=======
+					foreground: 'hsl(var(--primary-foreground))'
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,6 +71,7 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
+<<<<<<< HEAD
 					foreground: 'hsl(var(--accent-foreground))',
 					green: 'hsl(var(--accent-green))',
 					blue: 'hsl(var(--accent-blue))',
@@ -72,6 +83,10 @@ export default {
 				"tournament-silver": "hsl(var(--tournament-silver))",
 				"tournament-bronze": "hsl(var(--tournament-bronze))",
 				"tournament-accent": "hsl(var(--tournament-accent))",
+=======
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -79,6 +94,7 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+<<<<<<< HEAD
 				}
 			},
 			backgroundImage: {
@@ -90,6 +106,20 @@ export default {
 				"tournament-glow": "var(--shadow-tournament-glow)",
 				"tournament-subtle": "var(--shadow-tournament-subtle)",
 			},
+=======
+				},
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
+				}
+			},
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -111,6 +141,7 @@ export default {
 					to: {
 						height: '0'
 					}
+<<<<<<< HEAD
 				},
 				fadeIn: {
 					from: { opacity: '0', transform: 'translateY(10px)' },
@@ -140,10 +171,13 @@ export default {
 				'sabo-data-flow': {
 					'0%': { transform: 'translateX(-100%)' },
 					'100%': { transform: 'translateX(100%)' }
+=======
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
+<<<<<<< HEAD
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fadeIn 0.3s ease-out',
 				'slide-up': 'slideUp 0.2s ease-out',
@@ -164,4 +198,11 @@ export default {
 	plugins: [
 		import('tailwindcss-animate').then(m => (m.default ?? (m as any))) as any
 	],
+=======
+				'accordion-up': 'accordion-up 0.2s ease-out'
+			}
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
+>>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
 } satisfies Config;
