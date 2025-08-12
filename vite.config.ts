@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig, PluginOption } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -15,22 +14,10 @@ export default defineConfig(({ mode }) => {
       .catch(() => {});
   }
 
-  if (mode === 'analyze') {
-    import('rollup-plugin-visualizer')
-      .then(mod => {
-        if (mod.visualizer) {
-          plugins.push(
-            mod.visualizer({
-              filename: 'dist/stats.html',
-              open: true,
-              gzipSize: true,
-              brotliSize: true,
-            })
-          );
-        }
-      })
-      .catch(() => {});
-  }
+  // Removed rollup-plugin-visualizer to fix build errors
+  // if (mode === 'analyze') {
+  //   // Optional: add bundle analyzer here if needed
+  // }
 
   return {
     base: '/', // Remove base path to fix routing issues
@@ -89,27 +76,3 @@ export default defineConfig(({ mode }) => {
     },
   };
 });
-=======
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
-
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
->>>>>>> 9b78a282fe1308a188ab7bd7da4e086ddc886dc8
